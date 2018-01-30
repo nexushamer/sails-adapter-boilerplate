@@ -128,6 +128,7 @@ datastore.runQuery(query).then(results => {
 });
 */
 
+/*
 var date = new Date();
 var components = [
     date.getYear(),
@@ -141,3 +142,17 @@ var components = [
 
 var id = components.join("");
 console.log(id);
+*/
+
+const query = datastore
+      .createQuery('__Stat_PropertyName_Kind__')
+      .filter('kind_name', '=', 'Task');
+	  
+datastore.runQuery(query).then(results => {
+		console.log(results);
+		var response = results[0];
+		var schema = response[0];
+		console.log(schema);
+		console.log(schema.kind_name);
+		console.log(schema.property_name);
+	});
