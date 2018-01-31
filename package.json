@@ -4,7 +4,7 @@
   "description": "gcdatastore adapter for Sails / Waterline",
   "main": "lib/adapter.js",
   "scripts": {
-    "test": "node test/integration/runner -R spec -b"
+    "test": "node test/unit/register && node test/integration/runner -R spec -b"
   },
   "repository": {
     "type": "git",

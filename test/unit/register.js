@@ -2,18 +2,18 @@
  * Test dependencies
  */
 var Adapter = require('../../');
+console.log("register file");
+console.log(Adapter);
 
+//Adapter.registerCollection();
 
 describe('registerCollection', function () {
-
+	console.log('describe method it has bean called for the registerCollection');
+	
 	it('should not hang or encounter any errors', function (done) {
 		Adapter.registerCollection({
 			identity: 'foo'
 		}, done);
-	});
-
-	// e.g.
-	// it('should create a mysql connection pool', function () {})
-	// it('should create an HTTP connection pool', function () {})
-	// ... and so on.
+	});	
+	
 });
