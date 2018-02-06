@@ -4,7 +4,8 @@
   "description": "gcdatastore adapter for Sails / Waterline",
   "main": "lib/adapter.js",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha --reporter spec test/unit/*.js && node test/integration/runner"
+    "test": "node ./node_modules/mocha/bin/mocha --reporter spec --check-leaks test/unit/*.js && node test/integration/runner",
+    "test-unit": "node ./node_modules/mocha/bin/mocha --reporter spec --check-leaks test/unit/*.js "
   },
   "repository": {
     "type": "git",
